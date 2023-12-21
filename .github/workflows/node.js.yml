@@ -30,10 +30,18 @@ jobs:
     - run: npm run build --if-present
     - run: npm run test:staging
     - name: remote_ssh_commands
-      uses: Sithi5/remote-ssh-commands-action@1.1.2
+      uses: Sithi5/remote-ssh-commands-action@1.1.2string-calculator
       with:
-        key: ${{secret.CS_VM_KEY
-
+        key: ${{secret.CS_VM_SSH}}
+        host: ${{secrets.VM_CS_IP}}
+        username: ${{secrets.VM_CS_USER}}
+        script: |
+          pm2 delete all
+          cd /home/std111/string-calculator
+          git pull
+          npm install
+          echo  ok >> /home/std111/status
+          pm2 start node index.js
 
 
   
