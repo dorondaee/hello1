@@ -23,9 +23,9 @@ jobs:
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v1.0.0
       with:
-        key: ${{secrets.CS_VM_SSH}}
         host: ${{secrets.CS_VM_IP}}
         username: ${{secrets.CS_VM_USER}}
+        password: ${{secrets.CS_VM_PASS}}      
         script: |
           pm2 delete all
           cd /home/st111/string-calculator
