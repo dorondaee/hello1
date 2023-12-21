@@ -32,7 +32,7 @@ jobs:
     - name: remote_ssh_commands
       uses: Sithi5/remote-ssh-commands-action@1.1.2string-calculator
       with:
-        key: ${{secret.CS_VM_SSH}}
+        key: ${{secrets.CS_VM_SSH}}
         host: ${{secrets.VM_CS_IP}}
         username: ${{secrets.VM_CS_USER}}
         script: |
