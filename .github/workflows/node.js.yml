@@ -9,9 +9,9 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v1.0.0
       with:
-        host: 193.106.55.101
-        username: st111
-        password: 2024@cs@2024
+        host: ${{secrets.CS_VM_IP}}
+        username: ${{secrets.CS_VM_USER}}
+        password: ${{secrets.CS_VM_PASS}} 
         script: |
           pm2 delete all
           cd /home/st111/string-calculator
