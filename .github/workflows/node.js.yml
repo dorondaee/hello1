@@ -29,8 +29,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm run test:staging
-    - name: remote_ssh_commands
-      uses: Sithi5/remote-ssh-commands-action@1.1.2string-calculator
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@v1.0.0
       with:
         key: ${{secrets.CS_VM_SSH}}
         host: ${{secrets.VM_CS_IP}}
