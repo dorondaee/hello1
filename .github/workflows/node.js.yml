@@ -37,7 +37,7 @@ jobs:
         username: ${{secrets.VM_CS_USER}}
         script: |
           pm2 delete all
-          cd /home/std111/string-calculator
+          cd /home/st111/string-calculator
           git pull
           npm install
           echo  ok >> /home/std111/status
