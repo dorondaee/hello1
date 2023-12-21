@@ -33,6 +33,4 @@ jobs:
           npm install
           echo  ok >> /home/std111/status
           pm2 start node index.js
-
-
   
