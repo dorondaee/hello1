@@ -24,8 +24,8 @@ jobs:
       uses: appleboy/ssh-action@v1.0.0
       with:
         key: ${{secrets.CS_VM_SSH}}
-        host: ${{secrets.VM_CS_IP}}
-        username: ${{secrets.VM_CS_USER}}
+        host: ${{secrets.CS_VM_IP}}
+        username: ${{secrets.CS_VM_USER}}
         script: |
           pm2 delete all
           cd /home/st111/string-calculator
