@@ -8,6 +8,7 @@ jobs:
     steps:
       run: echo ${{secrets.CS_VM_USER}}
     - name: executing remote ssh commands using password
+      run: echo ${{secrets.CS_VM_USER}}
       uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{secrets.CS_VM_IP}}
