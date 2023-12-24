@@ -9,7 +9,7 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v1.0.0
       with:
-        hhost: ${{secrets.CS_VM_IP}}
+        host: ${{secrets.CS_VM_IP}}
         username: ${{secrets.CS_VM_USER}}
         password: ${{secrets.CS_VM_PASS}} 
         port: ${{ secrets.PORT }}
