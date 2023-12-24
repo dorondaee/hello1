@@ -12,5 +12,11 @@ jobs:
         host: ${{secrets.CS_VM_IP}}
         username: ${{secrets.CS_VM_USER}}
         password: ${{secrets.CS_VM_PASS}} 
-        script: echo  ok >> /home/std111/status
+        script: |
+          pm2 delete all
+          cd /home/st111/string-calculator
+          git pull
+          npm install
+          echo  ok >> /home/std111/status
+          pm2 start node index.js
          
