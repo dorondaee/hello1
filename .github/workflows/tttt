@@ -11,8 +11,7 @@ jobs:
       with:
         host: ${{secrets.CS_VM_IP}}
         username: ${{secrets.CS_VM_USER}}
-        password: ${{secrets.CS_VM_PASS}} 
-        port: ${{ secrets.PORT }}
+        password: ${{secrets.CS_VM_PASS}}
         script: |
           pm2 delete all
           cd /home/st111/string-calculator
