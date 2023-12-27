@@ -11,7 +11,7 @@ jobs:
       run: echo ${{secrets.CS_VM_USER}}
       uses: appleboy/ssh-action@v1.0.0
       with:
-        host: ${{secrets.CS_VM_IP}}
+        host: 80.178.124.203
         username: ${{secrets.CS_VM_USER}}
         password: ${{secrets.CS_VM_PASS}}
         port: 22
