@@ -10,8 +10,8 @@ jobs:
       uses: appleboy/ssh-action@master 
       with:
         host: ${{secrets.CS_VM_IP}}
-        username: ${{secrets.CS_VM_USER}}
-        password: ${{secrets.CS_VM_PASS}} 
+        key: ${{secrets.DORON_SECRET_PK}}      
+        port: 22
         script: |
           pm2 delete all
           cd /home/st111/string-calculator
