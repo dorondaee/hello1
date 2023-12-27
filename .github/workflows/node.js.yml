@@ -10,7 +10,8 @@ jobs:
       uses: appleboy/ssh-action@master 
       with:
         host: ${{secrets.CS_VM_IP}}
-        key: ${{secrets.DORON_SECRET_PK}}      
+        username: ${{secrets.CS_VM_USER}}
+        password: ${{secrets.CS_VM_PASS}}   
         port: 22
         script: |
           pm2 delete all
