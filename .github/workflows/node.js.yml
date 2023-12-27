@@ -18,6 +18,6 @@ jobs:
           cd /home/st111/string-calculator
           git pull
           npm install
-          echo  ok >> /home/std111/status
+          echo  ok >> /home/st111/status
           pm2 start node index.js
          
